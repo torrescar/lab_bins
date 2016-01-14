@@ -1,0 +1,26 @@
+﻿Authors: Carine Torres (cmt57), Michael Figueiras (mdf15), Colette Torres (cft6)
+
+
+Readability
+*Pieces of code that help our understanding of the algorithm are meaningful variable and method names that succinctly reflect the purpose of the method or what the variable is acting as a placeholder for.  Our understanding of the algorithm is obscured by the length of the code (it is often repetitive) and the lack of comments.
+*It would be helpful to add comments that describe when worst-fit in-order is being implemented and when worst-fit in-decreasing-order is being implemented.  Additionally, any comments to further clarify what the purpose of large blocks of code (like loops) would help.
+*The code could be more concise and clear within the for loops because theres a lot of code within the loops.
+
+
+Testability
+*I would test this code for bugs by running it on different data files. There is a null pointer exception but I think it has to do with 
+*One useful test case for the code as-written could be a file with the following repetitive sizes to compare output for the different methods and ensure their accuracy:
+        * 750000
+        * 750000
+        * 800000
+        * 800000
+        * 150000
+        * 150000
+*Additional helper functions that could be helpful are one for worst-fit decreasing method and one for worst-fit method. One helper function also needed is a method to iterate through the data and execute priority queue functions since that occurs frequently within the main function.
+*A test case for the new code could be the same as in number two so that we can double check that nothing has changed with this refactored function.  If something changed, we would know that our refactoring was not actually accurate.
+
+
+Extensibility 
+*There is duplicate code with each of the heuristics.  When adding a file to a disk, the calls to remove and add from the priority queue can be put into a function so that the function can be accessed for each of the heuristics instead of having repeated code.  The print statements can also be put into a function and just have parameters to specify the method being printed out so that the same print statements don't need to be repeated for each heuristic.  The Bins class is also a lazy class because the code to run the heuristics is not in any functions.  This means that all the code to create the bins is in the main method, when functions to do the sorting of bins should be utilized.  In the Disk method, there is also excessive usage of brackets around if/else statements with only one line to be executed. 
+*This code suggests that in the future, if someone wanted to compare the performance of a wider variety of fitting algorithms, 
+*There are dependencies—
